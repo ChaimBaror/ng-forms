@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 export class AppComponent implements OnInit {
   genders = ['male', 'female'];
   signupForm: FormGroup;
-  forbiddenUsernames = ['Chris', 'Anna'];
+  forbiddenUsernames = ['', ''];
 
   constructor() {}
 
@@ -31,15 +31,15 @@ export class AppComponent implements OnInit {
     );
     this.signupForm.setValue({
       'userData': {
-        'username': 'Max',
-        'email': 'max@test.com'
+        'username': 'chaim',
+        'email': 'chaim@test.com'
       },
       'gender': 'male',
       'hobbies': []
     });
     this.signupForm.patchValue({
       'userData': {
-        'username': 'Anna',
+        'username': 'yossi',
       }
     });
   }
